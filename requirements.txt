@@ -1,0 +1,11 @@
+# Copyright (c) 2026 Mamata Joshi, Afsana Tasnim Juha, Rob Rood
+# Licensed under the MIT License
+
+# ML packages
+scikit-learn
+
+# dataset packages
+kagglehub
+
+# testing
+pytest
