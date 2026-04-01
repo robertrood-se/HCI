@@ -36,3 +36,5 @@ def get_dataset_summary(df: pd.DataFrame):
     print("--- Dataset Summary ---")
     print(f"Rows: {df.shape[0]} | Columns: {df.shape[1]}")
     print(df.head())
+    
+    
