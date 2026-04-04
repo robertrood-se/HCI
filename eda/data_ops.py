@@ -8,7 +8,7 @@ import pandas as pd
 from typing import List, Optional
 
 def load_csv_data(file_path: Path, columns: Optional[List[str]] = None) -> pd.DataFrame:
-    """loads the requested dataset CSV file and returns it as a scikit-learn Bunch object.
+    """loads the requested dataset CSV file and returns it as a Pandas Dataframe.
 
     :param ds_file: a Path object pointing to the location of the dataset csv file.
     :param columns: the specific columns that you would like to load from the dataset. Default is to load all columns.
