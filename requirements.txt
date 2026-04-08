@@ -3,6 +3,7 @@
 
 # ML packages
 scikit-learn
+xgboost
 
 # dataset packages
 kagglehub

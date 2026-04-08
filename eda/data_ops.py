@@ -7,17 +7,18 @@ from pathlib import Path
 import pandas as pd
 from typing import List, Optional
 
-def load_csv_data(file_path: Path, columns: Optional[List[str]] = None) -> pd.DataFrame:
-    """loads the requested dataset CSV file and returns it as a scikit-learn Bunch object.
+def load_csv_data(file_path: Path, columns: Optional[List[str]] = None, nrows: int = 20_000) -> pd.DataFrame:
+    """loads the requested dataset CSV file and returns it as a Pandas Dataframe.
 
     :param ds_file: a Path object pointing to the location of the dataset csv file.
     :param columns: the specific columns that you would like to load from the dataset. Default is to load all columns.
+    :param nrows: an int defining how many rows you'd like to load from your dataset. Defaults to 20_000 rows if not specified. This is to pevent kernel crashes.
     
     :returns: a pandas Dataframe of the dataset.
     """
     try:
         # usecols allows pandas to only read the necessary data into memory
-        df = pd.read_csv(file_path, usecols=columns)
+        df = pd.read_csv(file_path, usecols=columns, nrows=nrows)
         return df
     
     except FileNotFoundError:
@@ -36,3 +37,5 @@ def get_dataset_summary(df: pd.DataFrame):
     print("--- Dataset Summary ---")
     print(f"Rows: {df.shape[0]} | Columns: {df.shape[1]}")
     print(df.head())
+    
+    
