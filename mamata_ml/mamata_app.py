@@ -71,7 +71,6 @@ st.markdown("""
 <div class="hero-banner">
     <h2 style="margin-bottom: 0.4rem;">🦠 COVID-19 Prediction Study</h2>
     <p style="color: #8b949e; margin-bottom: 1rem;">Answer the questions below based on the patient profile. All fields are optional.</p>
-    <span class="tag">Logistic Regression Model</span>
     <span class="tag">100,000 Patient Records</span>
     <span class="tag">Phase 4 — User Study</span>
 </div>
@@ -240,9 +239,9 @@ if st.button("Submit and See Model Prediction"):
     col9.metric("Top Risk Factor", top_factor)
 
     if model_says_yes:
-        st.markdown('<div class="result-positive">⚠️ The model predicts this patient is at risk.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="result-positive">The model predicts this patient is at risk.</div>', unsafe_allow_html=True)
     else:
-        st.markdown('<div class="result-negative">✅ The model predicts this patient is not at risk.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="result-negative">The model predicts this patient is not at risk.</div>', unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
     st.caption("Risk probability: " + str(round(prob * 100)) + "% — Based on Logistic Regression model trained on 100,000 COVID-19 patient records.")
