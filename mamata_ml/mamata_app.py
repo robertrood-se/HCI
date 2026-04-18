@@ -1,3 +1,12 @@
+# COVID-19 Prediction Study — Mamata Joshi
+# 
+# SETUP:
+# 1. Install streamlit:  pip install streamlit
+# 2. Run the app:        streamlit run mamata_app.py
+# 3. Opens automatically in your browser at http://localhost:8501
+
+
+
 import streamlit as st
 import math
 
