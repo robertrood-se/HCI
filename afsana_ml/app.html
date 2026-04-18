@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COVID-19 Risk Prediction Tool</title>
+  <title>COVID-19 Risk Prediction App</title>
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
     rel="stylesheet">
@@ -1040,7 +1040,7 @@
     <div class="header-brand">
       <div class="header-icon">🦠</div>
       <div>
-        <div class="header-title">COVID-19 Risk Prediction Tool</div>
+        <div class="header-title">COVID-19 Risk Prediction App</div>
 
       </div>
     </div>
@@ -1099,8 +1099,13 @@
           </div>
 
           <div class="form-group">
-            <label>Your Age</label>
-            <input type="number" id="r-age" min="1" max="110" placeholder="e.g. 45" value="45">
+            <label for="r-name">Your Name</label>
+            <input type="text" id="r-name" name="name" placeholder="Enter your name">
+          </div>
+
+          <div class="form-group">
+            <label for="r-age">Your Age</label>
+            <input type="number" id="r-age" name="age" min="1" max="110" placeholder="Enter your age">
           </div>
 
           <div class="form-group">
@@ -1239,37 +1244,42 @@
           <div class="card-title">🗂️ Patient Profile</div>
 
           <div class="form-group">
-            <label>Patient Age</label>
-            <input type="number" id="d-age" min="1" max="120" placeholder="e.g. 58" value="58">
+            <label for="d-age">Patient Age</label>
+            <input type="number" id="d-age" min="1" max="120" placeholder="Enter age">
           </div>
+
           <div class="form-group">
-            <label>Sex</label>
+            <label for="d-sex">Sex</label>
             <select id="d-sex">
-              <option value="">Select...</option>
-              <option value="male" selected>Male</option>
+              <option value="" selected disabled>Select sex</option>
+              <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
           </div>
+
           <div class="form-group">
-            <label>Patient Type</label>
+            <label for="d-patient-type">Patient Type</label>
             <select id="d-patient-type">
+              <option value="" selected disabled>Select patient type</option>
               <option value="hospitalized">Hospitalized</option>
               <option value="outpatient">Outpatient</option>
             </select>
           </div>
-
           <div class="section-divider">Hospitalization Details</div>
 
           <div class="form-group">
-            <label>ICU Admission</label>
+            <label for="d-icu">ICU Admission</label>
             <select id="d-icu">
+              <option value="" selected disabled>Select</option>
               <option value="no">No</option>
               <option value="yes">Yes</option>
             </select>
           </div>
+
           <div class="form-group">
-            <label>Intubated</label>
+            <label for="d-intubated">Intubated</label>
             <select id="d-intubated">
+              <option value="" selected disabled>Select</option>
               <option value="no">No</option>
               <option value="yes">Yes</option>
             </select>
@@ -1411,49 +1421,59 @@
 
             <div class="stats-form-grid">
               <div class="form-group">
-                <label>Age</label>
-                <input type="number" id="s-age" value="62" min="1" max="120">
+                <label for="s-age">Age</label>
+                <input type="number" id="s-age" min="1" max="120" placeholder="Enter">
               </div>
+
               <div class="form-group">
-                <label>Sex</label>
+                <label for="s-sex">Sex</label>
                 <select id="s-sex">
+                  <option value="" selected disabled>Select</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </select>
               </div>
+
               <div class="form-group">
-                <label>Patient Type</label>
+                <label for="s-patient-type">Patient Type</label>
                 <select id="s-patient-type">
+                  <option value="" selected disabled>Select</option>
                   <option value="hospitalized">Hospitalized</option>
                   <option value="outpatient">Outpatient</option>
                 </select>
               </div>
+
               <div class="form-group">
-                <label>INTUBED
+                <label for="s-intubed">INTUBED
                   <span class="tooltip-hint"
                     data-tip="Whether the patient required mechanical ventilation (intubation)">?</span>
                 </label>
                 <select id="s-intubed">
+                  <option value="" selected disabled>Select</option>
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
                 </select>
               </div>
+
               <div class="form-group">
-                <label>ICU
+                <label for="s-icu">ICU
                   <span class="tooltip-hint"
                     data-tip="Whether the patient was admitted to the Intensive Care Unit">?</span>
                 </label>
                 <select id="s-icu">
+                  <option value="" selected disabled>Select</option>
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
                 </select>
               </div>
+
               <div class="form-group">
-                <label>CLASSIFICATION_FINAL
+                <label for="s-classification">CLASSIFICATION_FINAL
                   <span class="tooltip-hint"
                     data-tip="Final COVID-19 classification from testing (1-3 = positive, 4+ = negative/suspect)">?</span>
                 </label>
                 <select id="s-classification">
+                  <option value="" selected disabled>Select</option>
                   <option value="1">1 — Positive (confirmed)</option>
                   <option value="2">2 — Positive (probable)</option>
                   <option value="3">3 — Positive (associate)</option>
